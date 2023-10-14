@@ -10,9 +10,9 @@ class ActionsHolder extends React.Component {
     render() {
         return(
             <div className="actions-holder">
-                <Button text='Перевести' img={assets.send} link='#' />
-                <Button text='Получить' img={assets.receive} link='#' />
-                <Button text='Счёт' img={assets.account_settings} link='#' />
+                <Button text='Перевести' img={assets.send} link='#' height={50} width={50} />
+                <Button text='Получить' img={assets.receive} link='#' height={50} width={50} />
+                <Button text='Счёт' img={assets.account_settings} link='#' height={50} width={50} />
             </div>
         )
     };
