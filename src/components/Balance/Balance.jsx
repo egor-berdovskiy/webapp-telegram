@@ -24,11 +24,24 @@ class Balance extends React.Component {
     }
 
     componentDidMount () {
+        // const user_id = this.user?.id;
+        // userService.getUserData(user_id)
+        //     .then(userData => {
+        //         console.log(userData)
+        //         this.setState({ balance: userData.balance });
+        //     })
+        //     .catch(error => {
+        //         console.error('Ошибка при загрузке данных:', error);
+        //     })
+    }
+
+    Get = () => {
         const user_id = this.user?.id;
         userService.getUserData(user_id)
             .then(userData => {
-                console.log(userData)
+                console.log(userData);
                 this.setState({ balance: userData.balance });
+                console.log(`Баланс: ${this.balance} ${this.currency}`);
             })
             .catch(error => {
                 console.error('Ошибка при загрузке данных:', error);
@@ -45,6 +58,7 @@ class Balance extends React.Component {
                         <Button img={assets.plus_button} height={20} width={20} link='https://ya.ru' />
                     </div>
                 </div>
+                <button onClick={this.Get}>Сделать запрос</button>
             </div>
         )
     };
