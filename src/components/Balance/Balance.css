@@ -1,0 +1,16 @@
+.balance {
+    text-align: center;
+}
+
+.balance p {
+    margin: 0;
+}
+
+#balance-text {
+    color: var(--tg-theme-hint-color);
+}
+
+#balance-value {
+    color: var(--tg-theme-text-color);
+    font-weight: bold;
+}

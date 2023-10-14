@@ -1,0 +1,8 @@
+.button {
+
+}
+
+.button p {
+    color: var(--tg-theme-text-color);
+    text-align: center;
+}
