@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import './Balance.css';
 
@@ -6,6 +6,10 @@ import { assets } from '../../App';
 
 import Button from "../Button/Button";
 
+import { useTelegram } from '../../hooks/useTelegram';
+import userService from '../../services/userService';
+
+// this.setState({ balance: typeof response.data.balance === 'number' ? response.data.balance : 0 });
 class Balance extends React.Component {
     constructor(props) {
         super(props);
@@ -13,10 +17,21 @@ class Balance extends React.Component {
             balance: 0.0,
             currency: '$',
         };
+
+        const {tg, user} = useTelegram();
+        this.user = user;
+        this.tg = tg;
     }
 
     componentDidMount () {
-        
+        const user_id = this.user?.id;
+        userService.getUserData(user_id)
+            .then(userData => {
+                this.setState({ balance: userData.balance });
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке данных:', error);
+            })
     }
 
     render() {
