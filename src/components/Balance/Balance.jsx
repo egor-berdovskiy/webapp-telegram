@@ -24,15 +24,15 @@ class Balance extends React.Component {
     }
 
     componentDidMount () {
-        // const user_id = this.user?.id;
-        // userService.getUserData(user_id)
-        //     .then(userData => {
-        //         console.log(userData)
-        //         this.setState({ balance: userData.balance });
-        //     })
-        //     .catch(error => {
-        //         console.error('Ошибка при загрузке данных:', error);
-        //     })
+        const user_id = this.user?.id;
+        userService.getUserData(user_id)
+            .then(userData => {
+                console.log(userData)
+                this.setState({ balance: userData.balance });
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке данных:', error);
+            })
     }
 
     Get = () => {

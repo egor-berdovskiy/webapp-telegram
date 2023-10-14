@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const base_url = 'https://44cc-94-241-173-114.ngrok-free.app/'
-const api_string = 'api/v1/'
+const base_url = 'https://44cc-94-241-173-114.ngrok-free.app/';
+const api_string = 'api/v1/';
 
 const userService = {
     checkUser: (user_id) => {
@@ -9,6 +9,10 @@ const userService = {
             headers: {
                 'Bypass-Tunnel-Reminder': 'bla-bla',
             }
+        })
+        .then(response => response.data)
+        .catch(error => {
+            console.error('Ошибка при запросе checkUser:', error);
         });
     },
 
@@ -17,6 +21,10 @@ const userService = {
             headers: {
                 'Bypass-Tunnel-Reminder': 'bla-bla',
             }
+        })
+        .then(response => response.data)
+        .catch(error => {
+            console.error('Ошибка при запросе createUser:', error);
         });
     },
 
@@ -25,9 +33,12 @@ const userService = {
             headers: {
                 'Bypass-Tunnel-Reminder': 'bla-bla',
             }
+        })
+        .then(response => response.data)
+        .catch(error => {
+            console.error('Ошибка при запросе getUserData:', error);
         });
     },
-
 };
 
 export default userService;
