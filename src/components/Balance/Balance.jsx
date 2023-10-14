@@ -27,6 +27,7 @@ class Balance extends React.Component {
         const user_id = this.user?.id;
         userService.getUserData(user_id)
             .then(userData => {
+                console.log(userData)
                 this.setState({ balance: userData.balance });
             })
             .catch(error => {
