@@ -1,6 +1,6 @@
 .balance {
     text-align: center;
-    margin: 30px 0 30px 0;
+    padding: 30px 0 30px 0;
 }
 
 .balance p {
@@ -16,5 +16,5 @@
     color: var(--tg-theme-text-color);
     font-weight: bold;
     font-size: 19px;
-    margin-top: 10px;
+    padding-top: 10px;
 }
