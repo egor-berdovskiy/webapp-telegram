@@ -1,6 +1,10 @@
 .balance {
     text-align: center;
     padding: 30px 0 30px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .balance p {
@@ -17,4 +21,19 @@
     font-weight: bold;
     font-size: 19px;
     padding-top: 10px;
+}
+
+.content {
+    text-align: center;
+}
+
+#balance-info {
+    display: flex;
+    align-items: center;
+
+    padding-top: 10px;
+}
+#balance-info p {
+    padding: 0;
+    padding-right: 10px;
 }
