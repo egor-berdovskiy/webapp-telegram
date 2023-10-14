@@ -8,6 +8,7 @@ const userService = {
         return axios.get(`${base_url}${api_string}users/check/${user_id}`, {
             headers: {
                 'Bypass-Tunnel-Reminder': 'bla-bla',
+                'ngrok-skip-browser-warning': 'bla-bla',
             }
         })
         .then(response => response.data)
@@ -20,6 +21,7 @@ const userService = {
         return axios.post(`${base_url}${api_string}users/create/`, user_data, {
             headers: {
                 'Bypass-Tunnel-Reminder': 'bla-bla',
+                'ngrok-skip-browser-warning': 'bla-bla',
             }
         })
         .then(response => response.data)
@@ -32,6 +34,7 @@ const userService = {
         return axios.get(`${base_url}${api_string}users/${user_id}`, {
             headers: {
                 'Bypass-Tunnel-Reminder': 'bla-bla',
+                'ngrok-skip-browser-warning': 'bla-bla',
             }
         })
         .then(response => response.data)
