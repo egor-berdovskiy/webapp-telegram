@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import logo from './logo.svg';
 
 // Components
 import MainBlock from './components/MainBlock/MainBlock';
+import SplashScreen from './components/SplashScreen/SplashScreen';
 
 // Styles
 import './css/main.css';
@@ -20,6 +21,10 @@ import see from './images/see.svg'
 import send from './images/send.svg'
 import settings from './images/settings.svg'
 
+// Stickers data
+import sand_clock from './images/stickers/data/sand_clock.json';
+import bulb from './images/stickers/data/bulb.json';
+
 const assets = {
   account_settings,
   block,
@@ -33,13 +38,25 @@ const assets = {
   settings,
 }
 
+const animation_assets = {
+  sand_clock,
+  bulb,
+}
+
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  
   render() {
     return(
-      <MainBlock />
+      <div className='App'>
+        <SplashScreen />
+        <MainBlock />
+      </div>
     )
-  };
-};
+  }
+}
 
 export default App;
-export { assets };
+export { assets, animation_assets };
