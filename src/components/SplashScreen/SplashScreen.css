@@ -1,5 +1,5 @@
 .splash-screen {
-    background-color: var(--tg-theme-bg-color);
+    background-color: var(--tg-theme-secondary-bg-color);
 
     position: fixed;
     top: 0;
@@ -19,5 +19,5 @@
 }
 
 .splash-content {
-text-align: center;
+    text-align: center;
 }
