@@ -18,7 +18,7 @@ const SplashScreen = () => {
   
     return (
       <div className={`splash-screen ${loading ? 'active' : 'inactive'}`}>
-        {loading ? <Sticker animationData={animation_assets.sand_clock} width={150} height={150} /> : null}
+        {loading ? <Sticker className='splash-content' animationData={animation_assets.sand_clock} width={150} height={150} /> : null}
       </div>
     );
   };

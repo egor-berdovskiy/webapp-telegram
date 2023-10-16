@@ -16,4 +16,8 @@
 
 .splash-screen.active {
     opacity: 1;
-  }
+}
+
+.splash-content {
+text-align: center;
+}
