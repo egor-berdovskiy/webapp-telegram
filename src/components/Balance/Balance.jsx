@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import './Balance.css';
 
@@ -9,59 +9,53 @@ import Button from "../Button/Button";
 import { useTelegram } from '../../hooks/useTelegram';
 import userService from '../../services/userService';
 
-// this.setState({ balance: typeof response.data.balance === 'number' ? response.data.balance : 0 });
-class Balance extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
-            balance: 0.0,
-            currency: '$',
-        };
 
-        const {tg, user} = useTelegram();
-        this.user = user;
-        this.tg = tg;
-    }
+function Balance() {
+    const [state, setState] = useState({
+        balance: 0.0,
+        currency: '$',
+        debug: true,
+    });
 
-    componentDidMount () {
-        const user_id = this.user?.id;
+    const { tg, user } = useTelegram();
+
+    useEffect(() => {
+        const user_id = user?.id;
         userService.getUserData(user_id)
             .then(userData => {
                 console.log(userData)
-                this.setState({ balance: userData.balance });
+                setState({ balance: userData.balance });
             })
             .catch(error => {
                 console.error('Ошибка при загрузке данных:', error);
             })
-    }
+    }, [user?.id]);
 
-    Get = () => {
-        const user_id = this.user?.id;
+    const Get = () => {
+        const user_id = user?.id;
         userService.getUserData(user_id)
             .then(userData => {
                 console.log(userData);
-                this.setState({ balance: userData.balance });
-                console.log(`Баланс: ${this.balance} ${this.currency}`);
+                setState({ balance: userData.balance });
+                console.log(`Баланс: ${state.balance} ${state.currency}`);
             })
             .catch(error => {
                 console.error('Ошибка при загрузке данных:', error);
             })
-    }
-
-    render() {
-        return(
-            <div className="balance">
-                <div className="content">
-                    <p id="balance-text">Баланс</p>
-                    <div id="balance-info">
-                        <p id="balance-value">{this.state.balance} {this.state.currency}</p>
-                        <Button img={assets.plus_button} height={20} width={20} link='https://ya.ru' />
-                    </div>
-                </div>
-                <button onClick={this.Get}>Сделать запрос</button>
-            </div>
-        )
     };
+
+    return(
+        <div className="balance">
+            <div className="content">
+                <p id="balance-text">Баланс</p>
+                <div id="balance-info">
+                    <p id="balance-value">{state.balance} {state.currency}</p>
+                    <Button img={assets.plus_button} height={20} width={20} link='https://ya.ru' />
+                </div>
+            </div>
+            { state.debug ? <button onClick={Get}>Сделать запрос</button> : null }
+        </div>
+    )
 };
 
 export default Balance;
