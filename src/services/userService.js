@@ -10,33 +10,39 @@ const headers = {
 
 const userService = {
     checkUser: (user_id) => {
-        return axios.get(`${base_url}${api_string}users/check/${user_id}`, {
-            headers: headers
-        })
-        .then(response => response.data)
-        .catch(error => {
-            console.error('Ошибка при запросе checkUser:', error);
-        });
+        const url = `${base_url}${api_string}users/check/${user_id}`;
+        
+        return axios.get(url, { headers })
+            .then(response => {
+                return response.data;
+            })
+            .catch(error => {
+                console.error('Ошибка при запросе checkUser:', error);
+            });
     },
 
     createUser: (user_data) => {
-        return axios.post(`${base_url}${api_string}users/create/`, user_data, {
-            headers: headers
-        })
-        .then(response => response.data)
-        .catch(error => {
-            console.error('Ошибка при запросе createUser:', error);
-        });
+        const url = `${base_url}${api_string}users/create/`;
+
+        return axios.post(url, user_data, { headers })
+            .then(response => {
+                return response.data;
+            })
+            .catch(error => {
+                console.error('Ошибка при запросе createUser:', error);
+            });
     },
 
     getUserData: (user_id) => {
-        return axios.get(`${base_url}${api_string}users/${user_id}`, {
-            headers: headers
-        })
-        .then(response => response.data)
-        .catch(error => {
-            console.error('Ошибка при запросе getUserData:', error);
-        });
+        const url = `${base_url}${api_string}users/${user_id}`;
+
+        return axios.get(url, { headers })
+            .then(response => {
+                return response.data;
+            })
+            .catch(error => {
+                console.error('Ошибка при запросе getUserData:', error);
+            });
     },
 };
 
