@@ -14,7 +14,7 @@ function Balance() {
     const [state, setState] = useState({
         balance: 0.0,
         currency: '$',
-        debug: true,
+        debug: false,
     });
 
     const { tg, user } = useTelegram();
