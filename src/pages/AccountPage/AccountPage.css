@@ -1,0 +1,4 @@
+.account-page {
+    background: var(--tg-theme-bg-color);
+    height: var(--tg-viewport-height);
+}

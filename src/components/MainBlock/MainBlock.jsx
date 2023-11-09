@@ -10,7 +10,7 @@ import { assets } from '../../App';
 class MainBlock extends React.Component {
     render() {
         return(
-            <div id="main-block">
+            <div className="main-block shadow">
                 <Balance />
                 <ActionsHolder />
             </div>

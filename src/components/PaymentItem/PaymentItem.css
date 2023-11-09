@@ -1,0 +1,57 @@
+.payment-item {
+    background: var(--tg-theme-secondary-bg-color);
+
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    cursor: pointer;
+}
+
+.hidden-radio {
+
+}
+
+.hidden-radio:checked {
+    animation: scale 0.3s ease-in-out;
+}
+
+@keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.payment-content {
+
+}
+
+.payment-icon {
+    height: 45px;
+    width: 45px;
+    background-color: white;
+
+    border-radius: 100%;
+
+    float: left;
+}
+
+.payment-title {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.payment-arrow {
+    float: right;
+}
+
+.active {
+    border: solid 2px black;
+}

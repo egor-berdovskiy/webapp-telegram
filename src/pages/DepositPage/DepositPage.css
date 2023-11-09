@@ -1,0 +1,17 @@
+#deposit-page {
+    background: var(--tg-theme-bg-color);
+    height: var(--tg-viewport-height);
+}
+
+.title-holder {
+    text-align: center;
+    font-size: 80%;
+}
+
+.sticker-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+}

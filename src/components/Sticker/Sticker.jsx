@@ -17,7 +17,7 @@ class Sticker extends React.Component {
                 container,
                 animationData: this.props.animationData,
                 renderer: 'svg',
-                loop: true,
+                loop: this.props.loop,
                 autoplay: true,
             });
         }

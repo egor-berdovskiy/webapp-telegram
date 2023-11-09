@@ -1,0 +1,17 @@
+.recent-transactions-block {
+    background-color: var(--tg-theme-bg-color);
+    height: var(--tg-viewport-stable-height);
+}
+
+.recent-transactions-block h1 {
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    font-size: 19px;
+    text-align: center;
+}
+
+.see-transactions {
+    padding-top: 15px;
+}

@@ -12,7 +12,7 @@ class ActionsHolder extends React.Component {
             <div className="actions-holder">
                 <Button text='Перевести' img={assets.send} link='#' height={50} width={50} />
                 <Button text='Получить' img={assets.receive} link='#' height={50} width={50} />
-                <Button text='Счёт' img={assets.account_settings} link='#' height={50} width={50} />
+                <Button text='Счёт' img={assets.account_settings} link='/account' height={50} width={50} />
             </div>
         )
     };

@@ -1,0 +1,15 @@
+#payment-variant-holder {
+    background: var(--tg-theme-bg-color);
+
+    width: 80%;
+
+    border-radius: 10px;
+
+    padding: 5px;
+
+    margin: auto;
+}
+
+#payment-variant-holder {
+    
+}

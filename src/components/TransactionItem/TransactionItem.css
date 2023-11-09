@@ -1,0 +1,45 @@
+.transaction-item {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid var(--tg-theme-secondary-bg-color);
+}
+
+.transaction-item span {
+
+}
+
+.item-img-holder {
+    float: left;
+    padding-left: 15px;
+    padding-right: 20px;
+}
+
+.item-img {
+    height: 50px;
+    width: 50px;
+}
+
+.item-title {
+    color: var(--tg-theme-text-color);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.item-amount-plus {
+    color: #24ff00;
+    font-size: 16px;
+}
+
+.item-amount-plus span {
+    
+}
+
+.item-amount-minus {
+    color: #ff0000;
+    font-size: 16px;
+    float: right;
+}

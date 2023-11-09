@@ -13,7 +13,7 @@ class Button extends React.Component {
             <div className="button">
                 <a href={this.props.link}>
                     { this.props.img ? <img src={this.props.img} width={this.props.width} height={this.props.height}></img> : null }
-                    { this.props.text ? <p>{ this.props.text }</p> : null }
+                    { this.props.text ? <p className="colored-text">{ this.props.text }</p> : null }
                 </a>
             </div>
         )
